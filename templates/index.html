@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 prediction</title>
+</head>
+<body>
+    <form action="/data" method="POST">
+        <label> USMER </label> <input type="value" name="USMER"><br><br>
+        <label> MEDICAL_UNIT </label> <input type="value" name="MEDICAL_UNIT"><br><br>
+        <label> SEX </label> <input type="value" name="SEX"><br><br>
+        <label> PATIENT_TYPE </label> <input type="value" name="PATIENT_TYPE"><br><br>
+        <label> PNEUMONIA </label> <input type="value" name="PNEUMONIA"><br><br>
+        <label> AGE </label> <input type="value" name="AGE"><br><br>
+        <label> DIABETES </label> <input type="value" name="DIABETES"><br><br>
+        <label> COPD </label> <input type="value" name="COPD"><br><br>
+        <label> ASTHMA </label> <input type="value" name="ASTHMA"><br><br>
+        <label> INMSUPR </label> <input type="value" name="INMSUPR"><br><br>
+        <label> HIPERTENSION </label> <input type="value" name="HIPERTENSION"><br><br>
+        <label> CARDIOVASCULAR </label> <input type="value" name="CARDIOVASCULAR"><br><br>
+        <label> OBESITY </label> <input type="value" name="OBESITY"><br><br>
+        <label> RENAL_CHRONIC </label> <input type="value" name="RENAL_CHRONIC"><br><br>
+        <label> TOBACCO </label> <input type="value" name="TOBACCO"><br><br>
+        <label> CLASIFFICATION_FINAL </label> <input type="value" name="CLASIFFICATION_FINAL"><br><br>
+        <input type="submit">
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+<label >output:</label>{{prediction}}
+
+<table>
+    <thead>
+    <tr>
+        <th>USMER</th>
+        <th>MEDICAL_UNIT</th>
+        <th>SEX</th>
+        <th>PATIENT_TYPE</th>
+        <th>PNEUMONIA</th>
+        <th>AGE</th>
+        <th>DIABETES</th>
+        <th>COPD</th>
+        <th>ASTHMA</th>
+        <th>INMSUPR</th>
+        <th>HIPERTENSION</th>
+        <th>CARDIOVASCULAR</th>
+        <th>OBESITY</th>
+        <th>RENAL_CHRONIC</th>
+        <th>TOBACCO</th>
+        <th>CLASIFFICATION_FINAL</th>
+        <th>Result</th>
+
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in output_data %} 
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+                <td>{{row[8]}}</td>
+                <td>{{row[9]}}</td>
+                <td>{{row[10]}}</td>
+                <td>{{row[11]}}</td>
+                <td>{{row[12]}}</td>
+                <td>{{row[13]}}</td>
+                <td>{{row[14]}}</td>
+                <td>{{row[15]}}</td>
+                <td>{{row[16]}}</td>
+            </tr>
+        {% endfor %}       
+</table>
+</body>
+</html>
